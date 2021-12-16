@@ -7,8 +7,8 @@
     </Styles.Resources>
     <Style Selector="ProgressBar">
         <Setter Property="Height" Value="12" />
-        <Setter Property="Background" Value="{DynamicResource UiBrushElement}" />
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushElementActive}" />
+        <Setter Property="Background" Value="{DynamicResource ControlFillColorDefault}" />
+        <Setter Property="Foreground" Value="{DynamicResource SystemAccentColor}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="CornerRadius" Value="4" />
         <Setter Property="VerticalAlignment" Value="Center" />

@@ -1,14 +1,15 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style Selector="CheckBox">
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushForegroundSecondary}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorTertiary}" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <ControlTemplate>
                 <Grid ColumnDefinitions="Auto, *">
                     <Border Name="IconBorder" Width="20" Height="20"
                             VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                            Background="{DynamicResource UiBrushElement}" CornerRadius="4">
+                            Background="{DynamicResource ControlFillColorDefault}" CornerRadius="5"
+                            Padding="3">
                         <TextBlock Name="Icon" HorizontalAlignment="Center" VerticalAlignment="Center"
                                    FontFamily="{DynamicResource FluentSystemIcons}" FontSize="16"
                                    FontWeight="{TemplateBinding FontWeight}"
@@ -27,9 +28,17 @@
     </Style>
 
     <Style Selector="CheckBox:pointerover /template/ TextBlock#Icon">
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushForegroundSecondary}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
     </Style>
+    <Style Selector="CheckBox:pointerover /template/ Border#IconBorder">
+        <Setter Property="Background" Value="{DynamicResource ControlFillColorSecondaryBrush}"></Setter>
+    </Style>
+
+
     <Style Selector="CheckBox:disabled /template/ Border#IconBorder">
-        <Setter Property="Background" Value="{DynamicResource UiBrushElementDisabled}" />
+        <Setter Property="Background" Value="{DynamicResource ControlFillColorDisabledBrush}" />
+    </Style>
+    <Style Selector="CheckBox:disabled /template/ ContentPresenter">
+        <Setter Property="Opacity" Value="0.8" />
     </Style>
 </Styles>

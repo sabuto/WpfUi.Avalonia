@@ -8,12 +8,15 @@
         Title="WpfUi.Avalonia.Demo">
     <StackPanel>
         <Button>Hello</Button>
-        <Button Content="Disabled" IsEnabled="False" />
+        <controls:Button Content="Disabled" IsEnabled="False" />
         <controls:Button Margin="0 0 0 6" Content="Default Button" Glyph="Autocorrect24" />
         <controls:Button Margin="0 0 0 6" Appearance="Danger" Content="Danger" Glyph="DockPanelLeft16" />
         <controls:Button Margin="0 0 0 6" Appearance="Dark" Content="Dark" Glyph="DockPanelLeft16" />
         <controls:Button Margin="0 0 0 6" Appearance="Light" Content="Light" Glyph="DockPanelLeft16" />
         <controls:Button Margin="0 0 0 6" Appearance="Secondary" Content="Secondary" Glyph="DockPanelLeft16" />
+        <controls:Button Margin="0 0 0 6" Appearance="Success" Content="Secondary" Glyph="DockPanelLeft16" />
+        <controls:Button Margin="0 0 0 6" Appearance="Caution" Content="Secondary" Glyph="DockPanelLeft16" />
+
 
         <controls:Hyperlink HorizontalAlignment="Center" NavigateUri="http://google.com">Google</controls:Hyperlink>
         <ProgressBar IsIndeterminate="True" />
@@ -30,7 +33,7 @@
         <!--     </Expander.Header> -->
         <!--     <TextBlock>Here we are</TextBlock> -->
         <!-- </Expander> -->
-        <controls:NumberBox></controls:NumberBox>
+        <!-- <controls:NumberBox></controls:NumberBox> -->
         <RadioButton> Test with Text</RadioButton>
         <RadioButton />
         <TextBox AcceptsReturn="True" TextWrapping="Wrap"/>

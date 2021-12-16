@@ -8,8 +8,9 @@
         <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushButtonForeground}" />
-        <Setter Property="Background" Value="{DynamicResource UiBrushButtonBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimary}" />
+        <Setter Property="Background" Value="{DynamicResource SystemAccentColor}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorLight3}"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -55,20 +56,24 @@
         <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushButtonForeground}" />
-        <Setter Property="Background" Value="{DynamicResource UiBrushButtonBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimary}" />
+        <Setter Property="Background" Value="{DynamicResource SystemAccentColor}" />
         <Setter Property="Template">
             <ControlTemplate>
-                <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="4">
+                <Border Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="4">
                     <StackPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                 Orientation="Horizontal">
                         <Label Name="ButtonIcon" Margin="0" Padding="0"
                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                               Content="{TemplateBinding RawGlyph}" FontFamily="{DynamicResource FluentSystemIcons}"
+                               Content="{TemplateBinding RawGlyph}"
+                               FontFamily="{DynamicResource FluentSystemIcons}"
                                FontSize="{TemplateBinding FontSize}"
                                FontWeight="{TemplateBinding FontWeight}"
                                Foreground="{TemplateBinding Foreground}" />
-                        <TextBlock Text="{TemplateBinding Content}" FontSize="{TemplateBinding FontSize}"
+                        <TextBlock Text="{TemplateBinding Content}"
+                                   FontSize="{TemplateBinding FontSize}"
                                    FontWeight="{TemplateBinding FontWeight}" />
                     </StackPanel>
                 </Border>
@@ -81,40 +86,58 @@
     </Style>
 
     <Style Selector="controls|Button[Appearance=Secondary]">
-        <Setter Property="Background" Value="{DynamicResource UiBrushButtonSecondaryBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushButtonSecondaryForeground}" />
+        <Setter Property="Background" Value="{DynamicResource ControlFillColorDefault}" />
     </Style>
 
     <Style Selector="controls|Button[Appearance=Danger]">
-        <Setter Property="Background" Value="{DynamicResource UiBrushButtonDangerBackground}" />
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushButtonDangerForeground}" />
+        <Setter Property="Background" Value="{DynamicResource PaletteRedColor}" />
     </Style>
 
-    <Style Selector="controls|Button:pointerover[Appearance=Primary]">
-        <Setter Property="Background" Value="{DynamicResource UiBrushButtonHover}" />
-    </Style>
-    <Style Selector="controls|Button:pointerover[Appearance=Secondary]">
-        <Setter Property="Background" Value="{DynamicResource UiBrushButtonSecondaryHover}" />
+    <Style Selector="controls|Button[Appearance=Dark]">
+        <Setter Property="Background" Value="#2e2e2e" />
     </Style>
 
-    <Style Selector="controls|Button:pointerover[Appearance=Danger]">
-        <Setter Property="Background" Value="{DynamicResource UiBrushButtonDangerHover}" />
+    <Style Selector="controls|Button[Appearance=Light]">
+        <Setter Property="Background" Value="#f3f3f3" />
     </Style>
 
-    <Style Selector="controls|Button:disabled">
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushButtonHover}" />
+    <Style Selector="controls|Button[Appearance=Success]">
+        <Setter Property="Background" Value="{DynamicResource PaletteGreenColor}" />
+    </Style>
+
+    <Style Selector="controls|Button[Appearance=Caution]">
+        <Setter Property="Background" Value="{DynamicResource PaletteOrangeColor}" />
+    </Style>
+
+    <!-- <Style Selector="controls|Button:pointerover[Appearance=Primary]"> -->
+    <!--     <Setter Property="Background" Value="{DynamicResource UiBrushButtonHover}" /> -->
+    <!-- </Style> -->
+    <!-- <Style Selector="controls|Button:pointerover[Appearance=Secondary]"> -->
+    <!--     <Setter Property="Background" Value="{DynamicResource ControlFillColorDefault}" /> -->
+    <!-- </Style> -->
+    <!-- -->
+    <!-- <Style Selector="controls|Button:pointerover[Appearance=Danger]"> -->
+    <!--     <Setter Property="Background" Value="{DynamicResource PaletteRedColor}" /> -->
+    <!-- </Style> -->
+
+    <Style Selector="controls|Button:disabled /template/ Border">
+        <Setter Property="Opacity" Value="0.8"></Setter>
     </Style>
 
     <Style Selector="controls|Button">
         <Setter Property="RenderTransform" Value="none" />
         <Setter Property="Transitions">
             <Transitions>
-                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:.075" />
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:.16" />
+                <DoubleTransition Property="Opacity" Duration="0:0:.075" />
             </Transitions>
         </Setter>
     </Style>
 
     <Style Selector="controls|Button:pressed">
         <Setter Property="RenderTransform" Value="scale(0.98)" />
+    </Style>
+    <Style Selector="controls|Button:pointerover">
+        <Setter Property="Opacity" Value="0.6"></Setter>
     </Style>
 </Styles>

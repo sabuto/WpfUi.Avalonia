@@ -3,12 +3,14 @@
     <Style Selector="ComboBoxItem">
         <Setter Property="MinHeight" Value="25" />
         <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushForeground}" />
-        <Setter Property="Background" Value="{DynamicResource UiBrushElement}" />
+        <Setter Property="Margin" Value="0"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimary}" />
+        <Setter Property="Background" Value="Transarent" />
         <Setter Property="Template">
             <ControlTemplate>
                 <Border Name="Border" Padding="8" VerticalAlignment="Stretch">
                     <ContentPresenter Name="PART_ContentPresenter"
+                                      VerticalAlignment="Center"
                                       TextBlock.Foreground="{TemplateBinding Foreground}"
                                       TextBlock.Background="{TemplateBinding Background}"
                                       BorderBrush="{TemplateBinding BorderBrush}"
@@ -24,11 +26,11 @@
         </Setter>
     </Style>
 
-    <Style Selector="ComboBoxItem:pointerover /template/ ContentPresenter">
-        <Setter Property="Background" Value="{DynamicResource UiBrushElementHover}" />
+    <Style Selector="ComboBoxItem:pointerover /template/ Border">
+        <Setter Property="Background" Value="{DynamicResource ControlFillColorSecondary}" />
     </Style>
 
     <Style Selector="ComboBoxItem:disabled /template/ ContentPresenter">
-        <Setter Property="TextBlock.Foreground" Value="{DynamicResource UiBrushElementForeground}" />
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource TextFillColorTertiary}" />
     </Style>
 </Styles>

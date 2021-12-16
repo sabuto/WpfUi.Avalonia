@@ -25,5 +25,9 @@ public enum Appearance
     /// <summary>
     ///     Red color theme.
     /// </summary>
-    Danger
+    Danger,
+
+    Success,
+
+    Caution
 }

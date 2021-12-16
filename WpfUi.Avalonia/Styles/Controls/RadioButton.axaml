@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style Selector="RadioButton">
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushForeground}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimary}" />
         <Setter Property="BorderBrush" Value="{DynamicResource UiBrushElementSecondary}" />
         <Setter Property="CornerRadius" Value="4" />
         <Setter Property="Padding" Value="8,0,0,0" />

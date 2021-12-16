@@ -1,6 +1,9 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style Selector="ComboBox">
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimary}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource SystemFillColorSolidNeutralBackground}"></Setter>
+        <Setter Property="BorderBrush" Value="{DynamicResource ControlFillColorSecondary}"/>
         <Setter Property="Margin" Value="0" />
         <Setter Property="MinHeight" Value="25" />
         <Setter Property="FocusAdorner" Value="{x:Null}" />
@@ -21,7 +24,7 @@
                                           Grid.ColumnSpan="2"
                                           IsVisible="False"
                                           TextBlock.FontWeight="{DynamicResource ComboBoxHeaderThemeFontWeight}"
-                                          Margin="{DynamicResource ComboBoxTopHeaderMargin}"
+                                          Margin="0"
                                           VerticalAlignment="Top" />
                         <Border x:Name="Background"
                                 Grid.Row="1"
@@ -30,17 +33,17 @@
                                 Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="{TemplateBinding CornerRadius}"
+                                CornerRadius="5"
                                 MinWidth="{DynamicResource ComboBoxThemeMinWidth}" />
 
                         <Border x:Name="HighlightBackground"
                                 Grid.Row="1"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="2"
-                                Background="{DynamicResource ComboBoxBackgroundUnfocused}"
-                                BorderBrush="{DynamicResource ComboBoxBackgroundBorderBrushUnfocused}"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="{TemplateBinding CornerRadius}" />
+                                CornerRadius="5" />
                         <TextBlock x:Name="PlaceholderTextBlock"
                                    Grid.Row="1"
                                    Grid.Column="0"
@@ -93,13 +96,13 @@
                                PlacementTarget="Background"
                                IsLightDismissEnabled="True">
                             <Border x:Name="PopupBorder"
-                                    Background="{DynamicResource ComboBoxDropDownBackground}"
-                                    BorderBrush="{DynamicResource ComboBoxDropDownBorderBrush}"
-                                    BorderThickness="{DynamicResource ComboBoxDropdownBorderThickness}"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="1"
                                     Margin="0,-1,0,-1"
                                     Padding="{DynamicResource ComboBoxDropdownBorderPadding}"
                                     HorizontalAlignment="Stretch"
-                                    CornerRadius="{DynamicResource OverlayCornerRadius}">
+                                    CornerRadius="0 0 8 8">
                                 <ScrollViewer
                                     HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
                                     VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">

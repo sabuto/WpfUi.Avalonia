@@ -44,7 +44,7 @@ public class NumberBox : TextBox
     public static readonly StyledProperty<bool> IntegersOnlyProperty =
         AvaloniaProperty.Register<NumberBox, bool>(nameof(IntegersOnly));
 
-    private static Regex _patternRegex;
+    internal Regex _patternRegex;
 
     static NumberBox()
     {

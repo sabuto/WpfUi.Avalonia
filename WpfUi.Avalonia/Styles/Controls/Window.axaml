@@ -7,8 +7,8 @@
     <Setter Property="BorderThickness" Value="0" />
     <Setter Property="Margin" Value="0" />
     <Setter Property="Padding" Value="0" />
-    <Setter Property="Background" Value="{DynamicResource UiBrushBackground}" />
-    <Setter Property="Foreground" Value="{DynamicResource UiBrushForeground}" />
+    <Setter Property="Background" Value="{DynamicResource ApplicationBackgroundColor}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimary}" />
     <Setter Property="FontSize" Value="13" />
     <Setter Property="TextBlock.FontWeight" Value="Regular" />
     <Setter Property="Template">

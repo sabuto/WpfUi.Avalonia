@@ -1,6 +1,8 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Assets/Fonts.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Accents/Pallette.axaml" />
     <StyleInclude Source="avares://WpfUi.Avalonia/Accents/BaseDark.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Accents/Brushes.axaml" />
     <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls.axaml" />
 </Styles>

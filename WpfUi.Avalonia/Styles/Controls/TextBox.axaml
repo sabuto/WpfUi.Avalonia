@@ -25,10 +25,10 @@
         </ContextMenu>
     </Styles.Resources>
     <Style Selector="TextBox">
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushForeground}" />
-        <Setter Property="Background" Value="{DynamicResource UiBrushElement}" />
-        <Setter Property="CaretBrush" Value="{DynamicResource UiBrushForeground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource UiBrushElementBorder}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
+        <Setter Property="Background" Value="{DynamicResource ControlFillColorDefaultBrush}" />
+        <Setter Property="CaretBrush" Value="{DynamicResource TextFillColorPrimaryBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ControlFillColorSecondaryBrush}" />
         <Setter Property="SelectionBrush" Value="{DynamicResource TextControlSelectionHighlightColor}" />
         <Setter Property="BorderThickness" Value="0 0 0 2" />
         <Setter Property="CornerRadius" Value="5" />
@@ -105,26 +105,26 @@
     </Style>
 
     <Style Selector="TextBox:focus">
-        <Setter Property="BorderBrush" Value="{DynamicResource UiBrushElementActive}" />
-        <Setter Property="Foreground" Value="{DynamicResource UiBrushForeground}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColor}" />
+        <Setter Property="Background" Value="{DynamicResource ControlFillColorDefaultBrush}"/>
     </Style>
 
     <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
-        <Setter Property="Background" Value="{DynamicResource UiBrushElement}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource UiBrushElementActive}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColor}" />
+        <Setter Property="Background" Value="{DynamicResource ControlFillColorDefaultBrush}"/>
         <Setter Property="BorderThickness" Value="0 0 0 2" />
     </Style>
 
     <Style Selector="TextBox /template/ DockPanel#PART_InnerDockPanel">
-        <Setter Property="Cursor" Value="IBeam" />
+        <Setter Property="Cursor" Value="Hand" />
     </Style>
     <Style Selector="TextBox /template/ TextBlock#PART_FloatingWatermark">
         <Setter Property="IsVisible" Value="False" />
     </Style>
 
     <Style Selector="TextBox:pointerover /template/ Border#PART_BorderElement">
-        <Setter Property="BorderBrush" Value="{DynamicResource UiBrushElementBorder}" />
-        <Setter Property="Background" Value="{DynamicResource UiBrushElement}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColor}" />
+        <Setter Property="Background" Value="{DynamicResource ControlFillColorDefaultBrush}"/>
     </Style>
 
     <Style
@@ -133,8 +133,8 @@
     </Style>
 
     <Style Selector="TextBox:pointerover:focus /template/ Border#PART_BorderElement">
-        <Setter Property="BorderBrush" Value="{DynamicResource UiBrushElementActive}" />
-        <Setter Property="Background" Value="{DynamicResource UiBrushElement}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColor}" />
+        <Setter Property="Background" Value="{DynamicResource ControlFillColorDefaultBrush}"/>
         <Setter Property="BorderThickness" Value="0 0 0 2" />
     </Style>
 
