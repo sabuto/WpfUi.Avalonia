@@ -1,0 +1,32 @@
+﻿<Style xmlns="https://github.com/avaloniaui"
+       Selector="Window">
+    <Setter Property="Height" Value="600" />
+    <Setter Property="MinHeight" Value="450" />
+    <Setter Property="Width" Value="1100" />
+    <Setter Property="MinWidth" Value="900" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Margin" Value="0" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="Background" Value="{DynamicResource UiBrushBackground}" />
+    <Setter Property="Foreground" Value="{DynamicResource UiBrushForeground}" />
+    <Setter Property="FontSize" Value="13" />
+    <Setter Property="TextBlock.FontWeight" Value="Regular" />
+    <Setter Property="Template">
+        <ControlTemplate>
+            <Panel>
+                <Border Background="{TemplateBinding Background}" IsHitTestVisible="False" />
+                <Panel Background="Transparent" Margin="{TemplateBinding WindowDecorationMargin}" />
+                <VisualLayerManager>
+                    <VisualLayerManager.ChromeOverlayLayer>
+                        <TitleBar />
+                    </VisualLayerManager.ChromeOverlayLayer>
+                    <ContentPresenter Name="PART_ContentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}"
+                                      Content="{TemplateBinding Content}"
+                                      Margin="{TemplateBinding Padding}"
+                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </VisualLayerManager>
+            </Panel>
+        </ControlTemplate>
+    </Setter>
+</Style>

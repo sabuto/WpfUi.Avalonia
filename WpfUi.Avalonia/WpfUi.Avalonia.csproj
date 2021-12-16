@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Remove=".gitignore" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="0.10.10" />
+        <PackageReference Include="Avalonia.Desktop" Version="0.10.10" />
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.10" />
+    </ItemGroup>
+    <ItemGroup>
+      <AvaloniaXaml Remove="WpfUiDark.axaml" />
+      <AvaloniaResource Include="WpfUiDark.axaml" />
+      <AvaloniaXaml Remove="WpfUiLight.axaml" />
+      <AvaloniaResource Include="WpfUiLight.axaml" />
+      <AvaloniaXaml Remove="Styles\Assets\Fonts.axaml" />
+      <AvaloniaResource Include="Styles\Assets\Fonts.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls.axaml" />
+      <AvaloniaResource Include="Styles\Controls.axaml" />
+      <None Remove="Fonts\FluentSystemIcons-Filled.ttf" />
+      <AvaloniaResource Include="Fonts\FluentSystemIcons-Filled.ttf" />
+      <None Remove="Fonts\FluentSystemIcons-Regular.ttf" />
+      <AvaloniaResource Include="Fonts\FluentSystemIcons-Regular.ttf" />
+      <AvaloniaXaml Remove="Accents\BaseDark.axaml" />
+      <AvaloniaResource Include="Accents\BaseDark.axaml" />
+      <AvaloniaXaml Remove="Accents\BaseLight.axaml" />
+      <AvaloniaResource Include="Accents\BaseLight.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\Button.axaml" />
+      <AvaloniaResource Include="Styles\Controls\Button.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\CaptionButtons.axaml" />
+      <AvaloniaResource Include="Styles\Controls\CaptionButtons.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\Card.axaml" />
+      <AvaloniaResource Include="Styles\Controls\Card.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\CheckBox.axaml" />
+      <AvaloniaResource Include="Styles\Controls\CheckBox.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\ComboBox.axaml" />
+      <AvaloniaResource Include="Styles\Controls\ComboBox.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\ComboBoxItem.axaml" />
+      <AvaloniaResource Include="Styles\Controls\ComboBoxItem.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\Expander.axaml" />
+      <AvaloniaResource Include="Styles\Controls\Expander.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\Hyperlink.axaml" />
+      <AvaloniaResource Include="Styles\Controls\Hyperlink.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\Icon.axaml" />
+      <AvaloniaResource Include="Styles\Controls\Icon.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\NumberBox.axaml" />
+      <AvaloniaResource Include="Styles\Controls\NumberBox.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\ProgressBar.axaml" />
+      <AvaloniaResource Include="Styles\Controls\ProgressBar.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\RadioButton.axaml" />
+      <AvaloniaResource Include="Styles\Controls\RadioButton.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\TextBox.axaml" />
+      <AvaloniaResource Include="Styles\Controls\TextBox.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\TitleBar.axaml" />
+      <AvaloniaResource Include="Styles\Controls\TitleBar.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\Window.axaml" />
+      <AvaloniaResource Include="Styles\Controls\Window.axaml" />
+    </ItemGroup>
+</Project>

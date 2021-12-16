@@ -1,0 +1,35 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style Selector="CheckBox">
+        <Setter Property="Foreground" Value="{DynamicResource UiBrushForegroundSecondary}" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Border Name="IconBorder" Width="20" Height="20"
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                            Background="{DynamicResource UiBrushElement}" CornerRadius="4">
+                        <TextBlock Name="Icon" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   FontFamily="{DynamicResource FluentSystemIcons}" FontSize="16"
+                                   FontWeight="{TemplateBinding FontWeight}"
+                                   Foreground="{DynamicResource UiBrushForeground}"
+                                   Text=""
+                                   TextAlignment="Center" />
+                    </Border>
+                    <ContentPresenter Grid.Column="1" Margin="4 -1 0 0" VerticalAlignment="Center" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="CheckBox:checked /template/ TextBlock#Icon">
+        <Setter Property="Text" Value="&#xF294;" />
+    </Style>
+
+    <Style Selector="CheckBox:pointerover /template/ TextBlock#Icon">
+        <Setter Property="Foreground" Value="{DynamicResource UiBrushForegroundSecondary}" />
+    </Style>
+    <Style Selector="CheckBox:disabled /template/ Border#IconBorder">
+        <Setter Property="Background" Value="{DynamicResource UiBrushElementDisabled}" />
+    </Style>
+</Styles>

@@ -1,0 +1,87 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:WpfUi.Avalonia.Controls">
+    <Style Selector="controls|NumberBox">
+        <Setter Property="Padding" Value="6,4" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Background" Value="{DynamicResource UiBrushElement}" />
+        <Setter Property="Foreground" Value="{DynamicResource UiBrushForeground}" />
+        <Setter Property="CaretBrush" Value="{DynamicResource UiBrushForeground}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource UiBrushElementBorder}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Name="PART_RootBorder"
+                        Padding="2"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="0 0 0 2"
+                        CornerRadius="5">
+                    <Grid>
+                        <TextBlock Name="PART_Placeholder"
+                                   Margin="0"
+                                   Padding="7 0 0 0"
+                                   VerticalAlignment="Center"
+                                   Foreground="{DynamicResource UiBrushForegroundSecondary}"
+                                   Text="{TemplateBinding Placeholder}" />
+                        <Grid ColumnDefinitions="*, Auto">
+                            <ScrollViewer Name="PART_ContentHost"
+                                          Grid.Column="0"
+                                          Margin="0">
+                                <TextPresenter Name="PART_TextPresenter"
+                                               Text="{TemplateBinding Value, Mode=TwoWay}"
+                                               CaretIndex="{TemplateBinding CaretIndex}"
+                                               SelectionStart="{TemplateBinding SelectionStart}"
+                                               SelectionEnd="{TemplateBinding SelectionEnd}"
+                                               TextAlignment="{TemplateBinding TextAlignment}"
+                                               TextWrapping="{TemplateBinding TextWrapping}"
+                                               PasswordChar="{TemplateBinding PasswordChar}"
+                                               RevealPassword="{TemplateBinding RevealPassword}"
+                                               SelectionBrush="{TemplateBinding SelectionBrush}"
+                                               SelectionForegroundBrush="{TemplateBinding SelectionForegroundBrush}"
+                                               CaretBrush="{TemplateBinding CaretBrush}"
+                                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </ScrollViewer>
+                            <Grid Name="PART_ControlButtons"
+                                  Grid.Column="1"
+                                  HorizontalAlignment="Right"
+                                  VerticalAlignment="Center"
+                                  RowDefinitions="Auto, Auto">
+                                <Button Grid.Row="0"
+                                        Margin="0 -1 0 -1"
+                                        Padding="6 0"
+                                        Background="Transparent"
+                                        BorderBrush="{DynamicResource UiBrushElementHover}">
+                                    <controls:Icon Name="IncrementIcon"
+                                                   Foreground="{DynamicResource UiBrushForegroundSecondary}"
+                                                   Glyph="ChevronUp20" />
+                                </Button>
+                                <Button Grid.Row="1"
+                                        Margin="0 -1 0 -1"
+                                        Padding="6 0"
+                                        Background="Transparent"
+                                        BorderBrush="{DynamicResource UiBrushElementHover}">
+                                    <controls:Icon Name="DecrementIcon"
+                                                   Foreground="{DynamicResource UiBrushForegroundSecondary}"
+                                                   Glyph="ChevronDown20" />
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="controls|NumberBox:focus /template/ Border#PART_RootBorder">
+        <Setter Property="BorderBrush" Value="{DynamicResource UiBrushElementActive}" />
+    </Style>
+    <Style Selector="controls|NumberBox[PlaceholderVisible=False] /template/ TextBlock#PART_Placeholder">
+        <Setter Property="IsVisible" Value="False" />
+    </Style>
+    <Style Selector="controls|NumberBox[ControlsVisible=False] /template/ Grid#PART_ControlButtons">
+        <Setter Property="IsVisible" Value="False" />
+        <Setter Property="Width" Value="0" />
+        <Setter Property="Height" Value="0" />
+    </Style>
+</Styles>

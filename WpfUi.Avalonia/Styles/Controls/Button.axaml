@@ -1,0 +1,120 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:WpfUi.Avalonia.Controls">
+    <Style Selector="Button">
+        <Setter Property="Padding" Value="30, 6" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{DynamicResource UiBrushButtonForeground}" />
+        <Setter Property="Background" Value="{DynamicResource UiBrushButtonBackground}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <!-- <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" -->
+                    <!--         CornerRadius="4"> -->
+                    <ContentPresenter Name="PART_ContentPresenter"
+                                      Padding="{TemplateBinding Padding}"
+                                      Background="{TemplateBinding Background}"
+                                      CornerRadius="4"
+                                      HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+                    <!-- </Border> -->
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource UiBrushButtonHover}" />
+    </Style>
+
+    <Style Selector="Button:disabled /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource UiBrushButtonHover}" />
+    </Style>
+
+    <Style Selector="Button">
+        <Setter Property="RenderTransform" Value="none" />
+        <Setter Property="Transitions">
+            <Transitions>
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:.075" />
+            </Transitions>
+        </Setter>
+    </Style>
+
+    <Style Selector="Button:pressed">
+        <Setter Property="RenderTransform" Value="scale(0.98)" />
+    </Style>
+
+    <Style Selector="controls|Button">
+        <Setter Property="Padding" Value="30,6" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{DynamicResource UiBrushButtonForeground}" />
+        <Setter Property="Background" Value="{DynamicResource UiBrushButtonBackground}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="4">
+                    <StackPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Orientation="Horizontal">
+                        <Label Name="ButtonIcon" Margin="0" Padding="0"
+                               VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                               Content="{TemplateBinding RawGlyph}" FontFamily="{DynamicResource FluentSystemIcons}"
+                               FontSize="{TemplateBinding FontSize}"
+                               FontWeight="{TemplateBinding FontWeight}"
+                               Foreground="{TemplateBinding Foreground}" />
+                        <TextBlock Text="{TemplateBinding Content}" FontSize="{TemplateBinding FontSize}"
+                                   FontWeight="{TemplateBinding FontWeight}" />
+                    </StackPanel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="controls|Button[IsGlyph=True] /template/ Label#ButtonIcon">
+        <Setter Property="Margin" Value="0 0 12 0" />
+    </Style>
+
+    <Style Selector="controls|Button[Appearance=Secondary]">
+        <Setter Property="Background" Value="{DynamicResource UiBrushButtonSecondaryBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource UiBrushButtonSecondaryForeground}" />
+    </Style>
+
+    <Style Selector="controls|Button[Appearance=Danger]">
+        <Setter Property="Background" Value="{DynamicResource UiBrushButtonDangerBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource UiBrushButtonDangerForeground}" />
+    </Style>
+
+    <Style Selector="controls|Button:pointerover[Appearance=Primary]">
+        <Setter Property="Background" Value="{DynamicResource UiBrushButtonHover}" />
+    </Style>
+    <Style Selector="controls|Button:pointerover[Appearance=Secondary]">
+        <Setter Property="Background" Value="{DynamicResource UiBrushButtonSecondaryHover}" />
+    </Style>
+
+    <Style Selector="controls|Button:pointerover[Appearance=Danger]">
+        <Setter Property="Background" Value="{DynamicResource UiBrushButtonDangerHover}" />
+    </Style>
+
+    <Style Selector="controls|Button:disabled">
+        <Setter Property="Foreground" Value="{DynamicResource UiBrushButtonHover}" />
+    </Style>
+
+    <Style Selector="controls|Button">
+        <Setter Property="RenderTransform" Value="none" />
+        <Setter Property="Transitions">
+            <Transitions>
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:.075" />
+            </Transitions>
+        </Setter>
+    </Style>
+
+    <Style Selector="controls|Button:pressed">
+        <Setter Property="RenderTransform" Value="scale(0.98)" />
+    </Style>
+</Styles>

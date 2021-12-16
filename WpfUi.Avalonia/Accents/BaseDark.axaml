@@ -1,0 +1,45 @@
+﻿<Style xmlns="https://github.com/avaloniaui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style.Resources>
+        <Color x:Key="UiBrushBackground">#202020</Color>
+        <Color x:Key="UiBrushBackgroundSecondary">#232323</Color>
+        <Color x:Key="UiBrushForeground">#ffffff</Color>
+        <Color x:Key="UiBrushForegroundSecondary">#b4b4b4</Color>
+
+        <!--  An element brush is a contrasting version of the background brush to allow a nice transparent background.  -->
+        <Color x:Key="UiBrushElement"> #08FFFFFF </Color>
+        <Color x:Key="UiBrushElementInverse"> #FFFFFF </Color>
+        <Color x:Key="UiBrushElementSecondary"> #FFCECECE </Color>
+        <Color x:Key="UiBrushElementSolid"> #2a2b32 </Color>
+        <Color x:Key="UiBrushElementSolidBorder"> #FF16171A </Color>
+        <Color x:Key="UiBrushElementHover"> #15FFFFFF </Color>
+        <Color x:Key="UiBrushElementBorder"> #3DFFFFFF </Color>
+        <Color x:Key="UiBrushElementDisabled">#232323 </Color>
+        <Color x:Key="UiBrushElementActive"> #4cc2ff </Color>
+        <Color x:Key="UiBrushElementActiveHover"> #FF7FD3FF </Color>
+        <Color x:Key="UiBrushElementActiveBorder"> #FF2491C9 </Color>
+        <Color x:Key="UiBrushElementClose"> #c32b1c </Color>
+
+        <Color x:Key="UiBrushHyperlink">#99ebff</Color>
+
+        <Color x:Key="UiBrushButtonForeground">#000000</Color>
+        <Color x:Key="UiBrushButtonBackground">#4cc2ff</Color>
+        <Color x:Key="UiBrushButtonHover">#48b3ee</Color>
+        <Color x:Key="UiBrushButtonSecondaryForeground">#ffffff</Color>
+        <Color x:Key="UiBrushButtonSecondaryBackground">#08FFFFFF</Color>
+        <Color x:Key="UiBrushButtonSecondaryHover">#15FFFFFF</Color>
+        <Color x:Key="UiBrushButtonDangerForeground">#ffffff</Color>
+        <Color x:Key="UiBrushButtonDangerBackground">#FFFF6868</Color>
+        <Color x:Key="UiBrushButtonDangerHover">#FFF74F4F</Color>
+
+        <Color x:Key="UiBrushNavigationForeground">#ffffff</Color>
+        <Color x:Key="UiBrushNavigationBackground">#202020</Color>
+        <Color x:Key="UiBrushNavigationBadgeActive">#4cc2ff</Color>
+
+        <Color x:Key="UiBrushNavigationButtonForeground">#ffffff</Color>
+        <Color x:Key="UiBrushNavigationButtonBackground">#202020</Color>
+        <Color x:Key="UiBrushNavigationButtonHover">#10FFFFFF</Color>
+        <Color x:Key="UiBrushNavigationButtonActive">#08FFFFFF</Color>
+        <Color x:Key="UiBrushNavigationButtonActiveHover">#15FFFFFF</Color>
+    </Style.Resources>
+</Style>

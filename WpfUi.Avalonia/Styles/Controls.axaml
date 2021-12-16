@@ -1,0 +1,13 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/Button.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/Window.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/ComboBox.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/Hyperlink.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/ProgressBar.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/CheckBox.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/Expander.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/RadioButton.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/TextBox.axaml" />
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/NumberBox.axaml" />
+</Styles>

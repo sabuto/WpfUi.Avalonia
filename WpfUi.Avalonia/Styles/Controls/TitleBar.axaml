@@ -1,0 +1,21 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style Selector="TitleBar">
+        <Setter Property="Width" Value="44" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="Foreground" Value="{DynamicResource UiBrushForeground}" />
+        <Setter Property="Background" Value="{DynamicResource UiBrushElementHover}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="Stretch">
+                    <Panel x:Name="PART_MouseTracker" Height="1" VerticalAlignment="Top" />
+                    <Panel x:Name="PART_Container">
+                        <Border x:Name="PART_Background" Background="{TemplateBinding Background}" />
+                        <CaptionButtons x:Name="PART_CaptionButtons" VerticalAlignment="Top"
+                                        HorizontalAlignment="Right" Foreground="{TemplateBinding Foreground}" />
+                    </Panel>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

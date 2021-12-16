@@ -1,0 +1,27 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:WpfUi.Avalonia.Controls">
+    <Style Selector="controls|Icon">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Foreground" Value="{DynamicResource UiBrushForeground}" />
+        <Setter Property="FontFamily" Value="{DynamicResource FluentSystemIcons}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border>
+                    <TextBlock Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                               FontSize="{TemplateBinding FontSize}"
+                               Foreground="{TemplateBinding Foreground}"
+                               Text="{TemplateBinding RawGlyph}" />
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="controls|Icon[Filled=True]">
+        <Setter Property="FontFamily" Value="{DynamicResource FluentSystemIconsFilled}" />
+    </Style>
+</Styles>

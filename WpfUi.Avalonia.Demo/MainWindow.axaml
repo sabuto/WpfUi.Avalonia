@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="WpfUi.Avalonia.MainWindow"
+        xmlns:controls="clr-namespace:WpfUi.Avalonia.Controls;assembly=WpfUi.Avalonia"
+        Title="WpfUi.Avalonia.Demo">
+    <StackPanel>
+        <Button>Hello</Button>
+        <Button Content="Disabled" IsEnabled="False" />
+        <controls:Button Margin="0 0 0 6" Content="Default Button" Glyph="Autocorrect24" />
+        <controls:Button Margin="0 0 0 6" Appearance="Danger" Content="Danger" Glyph="DockPanelLeft16" />
+        <controls:Button Margin="0 0 0 6" Appearance="Dark" Content="Dark" Glyph="DockPanelLeft16" />
+        <controls:Button Margin="0 0 0 6" Appearance="Light" Content="Light" Glyph="DockPanelLeft16" />
+        <controls:Button Margin="0 0 0 6" Appearance="Secondary" Content="Secondary" Glyph="DockPanelLeft16" />
+
+        <controls:Hyperlink HorizontalAlignment="Center" NavigateUri="http://google.com">Google</controls:Hyperlink>
+        <ProgressBar IsIndeterminate="True" />
+        <ComboBox>
+            <ComboBoxItem>Hello</ComboBoxItem>
+            <ComboBoxItem IsEnabled="False">GoodBye</ComboBoxItem>
+        </ComboBox>
+        <CheckBox />
+        <CheckBox IsEnabled="False" />
+        <!-- <ProgressBar Classes="Spinner" Height="24" Width="24" IsIndeterminate="True"></ProgressBar> -->
+        <!-- <Expander> -->
+        <!--     <Expander.Header> -->
+        <!--         <Label> Test123 </Label> -->
+        <!--     </Expander.Header> -->
+        <!--     <TextBlock>Here we are</TextBlock> -->
+        <!-- </Expander> -->
+        <controls:NumberBox></controls:NumberBox>
+        <RadioButton> Test with Text</RadioButton>
+        <RadioButton />
+        <TextBox AcceptsReturn="True" TextWrapping="Wrap"/>
+    </StackPanel>
+</Window>

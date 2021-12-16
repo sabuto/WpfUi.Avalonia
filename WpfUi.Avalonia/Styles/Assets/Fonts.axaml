@@ -1,0 +1,8 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Styles.Resources>
+        <FontFamily x:Key="FluentSystemIcons">avares://WpfUi.Avalonia/Fonts/#FluentSystemIcons-Regular</FontFamily>
+        <FontFamily x:Key="FluentSystemIconsFilled">avares://WpfUi.Avalonia/Fonts/#FluentSystemIcons-Filled</FontFamily>
+
+    </Styles.Resources>
+</Styles>

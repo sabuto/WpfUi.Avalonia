@@ -1,0 +1,9 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="WpfUi.Avalonia.App"
+             xmlns:theme="clr-namespace:WpfUi.Avalonia;assembly=WpfUi.Avalonia">
+    <Application.Styles>
+        <FluentTheme Mode="Dark"/>
+        <theme:WpfUiTheme Mode="Dark"></theme:WpfUiTheme>
+    </Application.Styles>
+</Application>
