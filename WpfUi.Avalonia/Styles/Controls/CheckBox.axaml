@@ -8,16 +8,17 @@
                 <Grid ColumnDefinitions="Auto, *">
                     <Border Name="IconBorder" Width="20" Height="20"
                             VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                            Background="{DynamicResource ControlFillColorDefault}" CornerRadius="5"
+                            Background="{DynamicResource ControlFillColorDefault}" 
+                            CornerRadius="5"
                             Padding="3">
                         <TextBlock Name="Icon" HorizontalAlignment="Center" VerticalAlignment="Center"
                                    FontFamily="{DynamicResource FluentSystemIcons}" FontSize="16"
                                    FontWeight="{TemplateBinding FontWeight}"
-                                   Foreground="{DynamicResource UiBrushForeground}"
+                                   Foreground="{TemplateBinding Foreground}"
                                    Text=""
                                    TextAlignment="Center" />
                     </Border>
-                    <ContentPresenter Grid.Column="1" Margin="4 -1 0 0" VerticalAlignment="Center" />
+                    <ContentPresenter Grid.Column="1" Margin="4 -1 0 0" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
                 </Grid>
             </ControlTemplate>
         </Setter>
