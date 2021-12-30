@@ -24,6 +24,8 @@
             <ComboBoxItem>Hello</ComboBoxItem>
             <ComboBoxItem IsEnabled="False">GoodBye</ComboBoxItem>
         </ComboBox>
+        <ToggleSwitch OffContent="test" OnContent="hello"></ToggleSwitch>
+        <ToggleButton></ToggleButton>
         <CheckBox>Test with text</CheckBox>
         <CheckBox IsEnabled="False" />
         <!-- <ProgressBar Classes="Spinner" Height="24" Width="24" IsIndeterminate="True"></ProgressBar> -->

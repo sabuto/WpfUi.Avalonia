@@ -10,4 +10,5 @@
     <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/RadioButton.axaml" />
     <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/TextBox.axaml" />
     <!-- <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/NumberBox.axaml" /> -->
+    <StyleInclude Source="avares://WpfUi.Avalonia/Styles/Controls/ToggleSwitch.axaml" />
 </Styles>

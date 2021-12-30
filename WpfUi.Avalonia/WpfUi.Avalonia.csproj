@@ -60,5 +60,7 @@
       <AvaloniaResource Include="Styles\Controls\TitleBar.axaml" />
       <AvaloniaXaml Remove="Styles\Controls\Window.axaml" />
       <AvaloniaResource Include="Styles\Controls\Window.axaml" />
+      <AvaloniaXaml Remove="Styles\Controls\ToggleSwitch.axaml" />
+      <AvaloniaResource Include="Styles\Controls\ToggleSwitch.axaml" />
     </ItemGroup>
 </Project>
