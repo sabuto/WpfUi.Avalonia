@@ -1,3 +1,7 @@
+# Please note
+
+I am not sure weather i will be continuing to work on this project as i have found [FluentAvalonia](https://github.com/amwx/FluentAvalonia) which is essentailly the same thing but much more mature
+
 # WpfUi.Avalonia
 
 The inspiration for this project was taken from https://github.com/lepoco/wpfui, I liked the look of it and wanted to
